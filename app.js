@@ -1,3 +1,131 @@
+// 1-MASALA.  Bahosi 5, 4, 3 bo’lgan o’quvchilarni ismlaridan iborat massiv qaytaruvchi getNamesByGrade(students, grade) funksiya tuzing. (map, filter)
+
+// 5 baho - (85 - 100)
+// 4 baho - (70 - 85)
+// 3 baho – (60 - 70)
+
+// SOLUTION
+
+// const students = [
+//     { name: "Quincy", percent: 96 },
+//     { name: "Jason", percent: 84 },
+//     { name: "Alexis", percent: 100 },
+//     { name: "Sam", percent: 65 },
+//     { name: "Katie", percent: 90 },
+//     { name: "Anna", percent: 75 },
+// ];
+
+// function getNamesByGrade(students, grade) {
+//     return students
+//         .map((student) => {
+//             if (student.percent > 60 && student.percent < 70) {
+//                 return {...student, grade: 3 };
+//             } else if (student.percent >= 70 && student.percent < 85) {
+//                 return {...student, grade: 4 };
+//             } else {
+//                 return {...student, grade: 5 };
+//             }
+//         })
+//         .filter((student) => student.grade == grade)
+//         .map((student) => student.name);
+// }
+// const result = getNamesByGrade(students, 5);
+// console.log(result);
+
+// 2-MASALA.  Massivdagi bir xil so’zlar sonini hosil qiluvchi obyekt yarating. (reduce)
+
+// Input: const animals = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
+// Output: {
+//     dog: 2,
+//     chicken: 3,
+//     cat: 1,
+//     rabbit: 1
+//  }
+
+// SOLUTION
+
+// const animals = [
+//     "dog",
+//     "chicken",
+//     "cat",
+//     "dog",
+//     "chicken",
+//     "chicken",
+//     "rabbit",
+// ];
+
+// const birXil = animals.reduce((acc, curVal) => {
+//     if (acc[curVal]) {
+//         acc[curVal] = acc[curVal] + 1;
+//     } else {
+//         acc[curVal] = 1;
+//     }
+//     return acc;
+// }, {});
+// console.log(birXil);
+
+// 3-MASALA.  Massiv elementlari kvadratlaridan hosil bo’lgan massiv hosil qiling. (map)
+
+// Input: [1, 2, 3, 4, 5]
+// Output: [1, 4, 9, 16, 25]
+
+// SOLUTION
+
+// const numbers = [1, 2, 3, 4, 5];
+// const result = numbers.map((num) => num ** 2);
+// console.log(result);
+
+// 4-MASALA.  Massivdagi musbat sonlar yig’indisini hisoblang. (filter va reduce)
+
+// Input: [ 1, -4, 12, 0, -3, 29, -150]
+// Output: 42
+
+// SOLUTION
+
+// const numbers = [1, -4, 12, 0, -3, 29, -150];
+// const result = numbers
+//     .filter((num) => num > 0)
+//     .reduce((acc, curVal) => (acc += curVal), 0);
+
+// console.log(result);
+
+// 5-MASALA.  Satrdagi so’zlarning bosh harflarini oling. (split, map, join)
+
+// Input: 'George Raymond Richard Martin'
+// Output: 'GRRM'
+
+// SOLUTION
+
+// const text = "George Raymond Richard Martin";
+// const result = text
+//     .split(" ")
+//     .map((item) => item[0])
+//     .join("");
+// console.log(result);
+
+// 6-MASALA.  Massivdagi eng yosh va eng qarilarni topib, ularni yoshlarini farqini toping. (sort).
+
+// Input: [
+// {name: 'John', age: 13},
+// {name: 'Mark', age: 56},
+// {name: 'Rachel', age: 45},
+// {name: 'Nate', age: 67},
+// {name: 'Jeniffer', age: 65}
+// ];
+// Output: 54
+
+// SOLUTION
+
+// const ages = [
+//     { name: "John", age: 13 },
+//     { name: "Mark", age: 56 },
+//     { name: "Rachel", age: 45 },
+//     { name: "Nate", age: 67 },
+//     { name: "Jeniffer", age: 65 },
+// ];
+// const result = ages.sort((a, b) => a.age - b.age);
+// console.log(result.at(-1).age - result[0].age);
+
 // 7-MASALA.  N ta elementdan iborat massiv berilgan.
 // Massiv elementlari orasidan juftlarini va toqlarini o'z ichiga oladigan massivlar hosil qilinsin. (filter)
 
@@ -22,44 +150,45 @@
 // }, []);
 // console.log(result);
 
-// 9-MASALA. Products massivini id, name, price, rating va discount bo'yicha sortlash; (sort)
+// PRODUCTS MASSIVI (9-15 MASALALAR UCHUN)
 
-// let products = [{
-//         id: 6,
-//         name: "Smarthpone",
-//         price: 12000,
-//         rating: 4.5,
-//         discount: 20,
-//     },
-//     {
-//         id: 2,
-//         name: "Acer",
-//         price: 10000,
-//         rating: 4.3,
-//         discount: 10,
-//     },
-//     {
-//         id: 1,
-//         name: "Mac book",
-//         price: 17000,
-//         rating: 4.7,
-//         discount: 40,
-//     },
-//     {
-//         id: 4,
-//         name: "HP",
-//         price: 21000,
-//         rating: 4.1,
-//         discount: 30,
-//     },
-//     {
-//         id: 5,
-//         name: "Dell",
-//         price: 35000,
-//         rating: 4.9,
-//         discount: 30,
-//     },
-// ];
+let products = [{
+        id: 6,
+        name: "Smarthpone",
+        price: 12000,
+        rating: 4.5,
+        discount: 20,
+    },
+    {
+        id: 2,
+        name: "Acer",
+        price: 10000,
+        rating: 4.3,
+        discount: 10,
+    },
+    {
+        id: 1,
+        name: "Mac book",
+        price: 17000,
+        rating: 4.7,
+        discount: 40,
+    },
+    {
+        id: 4,
+        name: "HP",
+        price: 21000,
+        rating: 4.1,
+        discount: 30,
+    },
+    {
+        id: 5,
+        name: "Dell",
+        price: 35000,
+        rating: 4.9,
+        discount: 30,
+    },
+];
+// 9-MASALA. Products massivini id, name, price, rating va discount bo'yicha sortlash; (sort)
 
 // SOLUTION
 
@@ -73,3 +202,59 @@
 // console.log("Reytingi bo'yicha", byRating);
 // const byDiscount = [...products].sort((a, b) => a.discount - b.discount);
 // console.log("Chegirmasi bo'yicha", byDiscount);
+
+// 10-MASALA. Rating bo'yicha eng kuchli product topilsin. (sort)
+
+// SOLUTION
+
+// const bestRating = [...products].sort((a, b) => a.rating - b.rating);
+// console.log(bestRating.at(-1));
+
+// 11-MASALA. Narxi eng past bo'lgan product topilsin. (sort)
+
+// SOLUTION
+
+// const lowestPrice = [...products].sort((a, b) => a.price - b.price);
+// console.log(lowestPrice.at(0));
+
+// 12-MASALA. Barcha products narxlari yig'indisi topilsin. (reduce)
+
+// SOLUTION
+
+// const allPrice = products.flatMap((product) => {
+//     return product.price;
+// });
+// const sumPrice = allPrice.reduce((acc, curVal) => acc + curVal);
+// console.log("Narxlari yig'indisi", sumPrice);
+
+// 13-MASALA. Faqatgina products nomlaridangina iborat bo'lgan massiv qaytaring. (map)
+
+// SOLUTION
+// const allNames = products.flatMap((product) => {
+//     return product.name;
+// });
+// console.log(allNames);
+
+// 14. Id si 5 bo'lgan elementni nomini qaytaruvchi dastur yozing. (find)
+
+// SOLUTION
+// const idFive = products.find((product) => {
+//     return product.id == 5;
+// });
+// console.log("IDsi 5 tovar bu: ", idFive.name);
+
+// 15-MASALA. Id si 4 bo'lgan productni o'chiruvchi dastur yozing. (filter)
+
+// SOLUTION
+// const idNofour = products.filter((product) => {
+//     return product.id !== 4;
+// });
+// console.log(idNofour);
+
+// 16-MASALA. Berilgan satrni faqatgina harflardan iborat ekanligiga tekshiring (split, every)
+
+let satr = "Hayrli k8n";
+const harfMi = satr.split("").every((harf) => {
+    return harf === String;
+});
+console.log(harfMi);
