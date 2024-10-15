@@ -253,8 +253,53 @@ let products = [{
 
 // 16-MASALA. Berilgan satrni faqatgina harflardan iborat ekanligiga tekshiring (split, every)
 
-let satr = "Hayrli k8n";
-const harfMi = satr.split("").every((harf) => {
-    return harf === String;
-});
-console.log(harfMi);
+// const str = "Hayrli kun";
+// const harf = str.split("").every((char) => {
+//     return (char >= "a" && char <= "z") || (char >= "A" && char <= "Z");
+// });
+// console.log(harf);
+
+// 17-MASALA. Massiv truthy va falsy elementlardan tuzilgan. O’sha massivdagi truthy va falsy elementlarni alohida massivlarga ajratib object qilib qaytaruvchi getTruthyFalsy funksiya tuzing. (filter)
+// Input: [false, 1, 10, "", null, "abdulaziz", 1.13, 0]
+// Output: {truthy: [1, 10, "abdulaziz", 1.13], falsy: [false, "", null, 0]}
+
+// SOLUTION
+// const arr = [false, 1, 10, "", null, "abdulaziz", 1.13, 0];
+// function getTruthyFalsy(arr) {
+//     const truthy = arr.filter(Boolean);
+//     const falsy = arr.filter((item) => !Boolean(item));
+//     return { truthy, falsy };
+// }
+// const result = getTruthyFalsy(arr);
+// console.log(result);
+
+// 18-MASALA. Satr berilgan.
+// Satrdagi so'zlar uzunligidan iborat bo'lgan massiv qaytaring. (split, map)
+// Input: "Men Abdulaziz Programmerman"
+// Output: [3, 9, 13]
+
+// SOLUTION
+// const sozlar = "Men Dadahon developerman";
+// const count = sozlar.split(" ").map((harflar) => harflar.length);
+// console.log(count);
+
+// 19-MASALA. Satrni bo'sh joy bor yoki yo'qligini tekshiring. (split, some)
+// Input: "Men Abdulaziz Programmerman"
+// Output: true
+
+// SOLUTION
+// const sozlar = "Men Dadahon developerman";
+// const boshJoy = sozlar.split("").some((harflar) => harflar.includes(" "));
+// console.log(boshJoy);
+
+// 20. Objectning kalit va qiymatlarining string ko'rinishidagi yig'indisidan iborat massiv qaytaring. (Object.entries, map, join)
+
+// Input: {a: 2, b: 5, c: 7}
+// Output: ['a2', 'b5', 'c7']
+
+// SOLUTION
+// const obj = { a: 2, b: 5, c: 7 };
+// const result = Object.entries(obj).map((abc) => {
+//     return abc.join("");
+// });
+// console.log(result);
