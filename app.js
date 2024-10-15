@@ -303,3 +303,40 @@ let products = [{
 //     return abc.join("");
 // });
 // console.log(result);
+
+// 22-MASALA. Quyidagi pupils massividagi barcha o 'quvchilarni protcentlarining o'rtacha qiymatini toping.(reduce)
+
+const pupils = [{
+        name: "Elbek",
+        protcent: 95,
+    },
+    {
+        name: "Zafar",
+        protcent: 78,
+    },
+    {
+        name: "Aziz",
+        protcent: 83,
+    },
+    {
+        name: "Jasur",
+        protcent: 88,
+    },
+    {
+        name: "Bobur",
+        protcent: 66,
+    },
+    {
+        name: "Kamron",
+        protcent: 75,
+    },
+];
+
+// SOLUTION
+
+// const result = pupils.flatMap((pupil) => {
+//     return pupil.protcent;
+// });
+// console.log(result);
+// const averagePr = result.reduce((acc, curVal) => (acc += curVal), 0);
+// console.log("Javob:", averagePr / result.length - 1);
