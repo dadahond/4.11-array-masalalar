@@ -323,32 +323,32 @@ let products = [
 
 // 22-MASALA. Quyidagi pupils massividagi barcha o 'quvchilarni protcentlarining o'rtacha qiymatini toping.(reduce)
 
-const pupils = [
-  {
-    name: "Elbek",
-    protcent: 95,
-  },
-  {
-    name: "Zafar",
-    protcent: 78,
-  },
-  {
-    name: "Aziz",
-    protcent: 83,
-  },
-  {
-    name: "Jasur",
-    protcent: 88,
-  },
-  {
-    name: "Bobur",
-    protcent: 66,
-  },
-  {
-    name: "Kamron",
-    protcent: 75,
-  },
-];
+// const pupils = [
+//   {
+//     name: "Elbek",
+//     protcent: 95,
+//   },
+//   {
+//     name: "Zafar",
+//     protcent: 78,
+//   },
+//   {
+//     name: "Aziz",
+//     protcent: 83,
+//   },
+//   {
+//     name: "Jasur",
+//     protcent: 88,
+//   },
+//   {
+//     name: "Bobur",
+//     protcent: 66,
+//   },
+//   {
+//     name: "Kamron",
+//     protcent: 75,
+//   },
+// ];
 
 // SOLUTION
 
@@ -362,6 +362,7 @@ const pupils = [
 // 23-MASALA. grade propertyga protcent 90-100 o'rtasida bo'lsa 5, 80-90 o'rtasida bo'lsa 4, 70-80 o'rtasida bo'lsa 3 bahoni, qolgan holatlarda 2 bahoni o'zlashtiring.(map)
 
 // SOLUTION
+
 // const baho = pupils.map((pupil) => {
 //   if (pupil.protcent > 90 && pupil.protcent < 100) {
 //     return { ...pupil, grade: 5 };
