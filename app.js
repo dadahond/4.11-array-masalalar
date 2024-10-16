@@ -379,20 +379,20 @@ const pupils = [
 
 // SOLUTION 24-25
 
-// const result = pupils
-//   .map((pupil) => {
-//     return { ...pupil, isPassed: pupil.protcent > 70 };
-//   })
-//   .reduce(
-//     (acc, curVal) => {
-//       curVal.isPassed
-//         ? (acc.passed = acc.passed + 1)
-//         : (acc.failed = acc.failed + 1);
-//       return acc;
-//     },
-//     {
-//       passed: 0,
-//       failed: 0,
-//     }
-//   );
-// console.log(result);
+// const result = pupils.map((pupil) => {
+//   return { ...pupil, isPassed: pupil.protcent > 70 };
+// });
+// console.log("24-MASALA JAVOBI:", result);
+// const javob = result.reduce(
+//   (acc, curVal) => {
+//     curVal.isPassed
+//       ? (acc.passed = acc.passed + 1)
+//       : (acc.failed = acc.failed + 1);
+//     return acc;
+//   },
+//   {
+//     passed: 0,
+//     failed: 0,
+//   }
+// );
+// console.log("25-MASALA JAVOBI", javob);
