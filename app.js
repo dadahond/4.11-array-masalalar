@@ -152,41 +152,42 @@
 
 // PRODUCTS MASSIVI (9-15 MASALALAR UCHUN)
 
-let products = [{
-        id: 6,
-        name: "Smarthpone",
-        price: 12000,
-        rating: 4.5,
-        discount: 20,
-    },
-    {
-        id: 2,
-        name: "Acer",
-        price: 10000,
-        rating: 4.3,
-        discount: 10,
-    },
-    {
-        id: 1,
-        name: "Mac book",
-        price: 17000,
-        rating: 4.7,
-        discount: 40,
-    },
-    {
-        id: 4,
-        name: "HP",
-        price: 21000,
-        rating: 4.1,
-        discount: 30,
-    },
-    {
-        id: 5,
-        name: "Dell",
-        price: 35000,
-        rating: 4.9,
-        discount: 30,
-    },
+let products = [
+  {
+    id: 6,
+    name: "Smarthpone",
+    price: 12000,
+    rating: 4.5,
+    discount: 20,
+  },
+  {
+    id: 2,
+    name: "Acer",
+    price: 10000,
+    rating: 4.3,
+    discount: 10,
+  },
+  {
+    id: 1,
+    name: "Mac book",
+    price: 17000,
+    rating: 4.7,
+    discount: 40,
+  },
+  {
+    id: 4,
+    name: "HP",
+    price: 21000,
+    rating: 4.1,
+    discount: 30,
+  },
+  {
+    id: 5,
+    name: "Dell",
+    price: 35000,
+    rating: 4.9,
+    discount: 30,
+  },
 ];
 // 9-MASALA. Products massivini id, name, price, rating va discount bo'yicha sortlash; (sort)
 
@@ -304,32 +305,49 @@ let products = [{
 // });
 // console.log(result);
 
+// 21-MASALA. Sonning raqamlari yig'indisini hisoblab beradigan digitSum() funksiya yozing. (rekursiv funksiya)
+
+// SOLUTION
+// let son = 10;
+// let counter = 0;
+
+// function calc() {
+//   counter += son;
+//   son--;
+//   if (0 < son) {
+//     calc();
+//   }
+// }
+// calc();
+// console.log(counter);
+
 // 22-MASALA. Quyidagi pupils massividagi barcha o 'quvchilarni protcentlarining o'rtacha qiymatini toping.(reduce)
 
-const pupils = [{
-        name: "Elbek",
-        protcent: 95,
-    },
-    {
-        name: "Zafar",
-        protcent: 78,
-    },
-    {
-        name: "Aziz",
-        protcent: 83,
-    },
-    {
-        name: "Jasur",
-        protcent: 88,
-    },
-    {
-        name: "Bobur",
-        protcent: 66,
-    },
-    {
-        name: "Kamron",
-        protcent: 75,
-    },
+const pupils = [
+  {
+    name: "Elbek",
+    protcent: 95,
+  },
+  {
+    name: "Zafar",
+    protcent: 78,
+  },
+  {
+    name: "Aziz",
+    protcent: 83,
+  },
+  {
+    name: "Jasur",
+    protcent: 88,
+  },
+  {
+    name: "Bobur",
+    protcent: 66,
+  },
+  {
+    name: "Kamron",
+    protcent: 75,
+  },
 ];
 
 // SOLUTION
@@ -340,3 +358,41 @@ const pupils = [{
 // console.log(result);
 // const averagePr = result.reduce((acc, curVal) => (acc += curVal), 0);
 // console.log("Javob:", averagePr / result.length - 1);
+
+// 23-MASALA. grade propertyga protcent 90-100 o'rtasida bo'lsa 5, 80-90 o'rtasida bo'lsa 4, 70-80 o'rtasida bo'lsa 3 bahoni, qolgan holatlarda 2 bahoni o'zlashtiring.(map)
+
+// SOLUTION
+// const baho = pupils.map((pupil) => {
+//   if (pupil.protcent > 90 && pupil.protcent < 100) {
+//     return { ...pupil, grade: 5 };
+//   } else if (pupil.protcent > 80 && pupil.protcent < 90) {
+//     return { ...pupil, grade: 4 };
+//   } else {
+//     return { ...pupil, grade: 3 };
+//   }
+// });
+// console.log(baho);
+
+// 24-MASALA. isPassed propertyga protcent 70 dan o'tsa true, aks holda false qiymat o'zlashtirilsin. (map)
+
+// 25-MASALA. Necha kishi imtihondan o'tdi va necha kishi imtihonda o'ta olmadi shuni ham hisoblang. (reduce)
+
+// SOLUTION 24-25
+
+// const result = pupils
+//   .map((pupil) => {
+//     return { ...pupil, isPassed: pupil.protcent > 70 };
+//   })
+//   .reduce(
+//     (acc, curVal) => {
+//       curVal.isPassed
+//         ? (acc.passed = acc.passed + 1)
+//         : (acc.failed = acc.failed + 1);
+//       return acc;
+//     },
+//     {
+//       passed: 0,
+//       failed: 0,
+//     }
+//   );
+// console.log(result);
